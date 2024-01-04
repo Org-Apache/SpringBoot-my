@@ -2,7 +2,7 @@ package com.dt.str.study.queue;
 
 import java.util.Scanner;
 
-public class ArrayQueueDemp {
+public class ArrayQueueDemo {
 
     public static void main(String[] args) {
         //≤‚ ‘∂”¡–

@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/JVM/JVM.iml" filepath="$PROJECT_DIR$/JVM/JVM.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LeeCode/LeeCode.iml" filepath="$PROJECT_DIR$/LeeCode/LeeCode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Netty-Demo/Netty-Demo.iml" filepath="$PROJECT_DIR$/Netty-Demo/Netty-Demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/SpringBoot-my.iml" filepath="$PROJECT_DIR$/.idea/SpringBoot-my.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dataStructure/dataStructure.iml" filepath="$PROJECT_DIR$/dataStructure/dataStructure.iml" />
+      <module fileurl="file://$PROJECT_DIR$/documents/documents.iml" filepath="$PROJECT_DIR$/documents/documents.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lambda/lambda.iml" filepath="$PROJECT_DIR$/lambda/lambda.iml" />
+      <module fileurl="file://$PROJECT_DIR$/netty/netty.iml" filepath="$PROJECT_DIR$/netty/netty.iml" />
+      <module fileurl="file://$PROJECT_DIR$/thread/thread.iml" filepath="$PROJECT_DIR$/thread/thread.iml" />
     </modules>
   </component>
 </project>

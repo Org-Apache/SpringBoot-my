@@ -23,11 +23,11 @@ import java.util.Set;
 
 *
 * */
-public class Code2023_07_17 {
+public class Code2023_07_17_1 {
     public static void main(String[] args) {
-        Code2023_07_17 code2023_07_17 = new Code2023_07_17();
+        Code2023_07_17_1 code2023_07_17_1 = new Code2023_07_17_1();
         int[] array = new int[]{1,100};
-        System.out.println(code2023_07_17.distinctAverages(array));
+        System.out.println(code2023_07_17_1.distinctAverages(array));
     }
 
     public int distinctAverages(int[] nums) {
