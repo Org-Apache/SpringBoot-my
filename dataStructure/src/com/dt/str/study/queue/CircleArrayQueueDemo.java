@@ -2,7 +2,7 @@ package com.dt.str.study.queue;
 
 import java.util.Scanner;
 
-public class ArrayQueueDemp {
+public class CircleArrayQueueDemo {
 
     public static void main(String[] args) {
         //测试队列
@@ -60,27 +60,29 @@ public class ArrayQueueDemp {
 }
 
 //使用数组模拟队列-编写一个ArrayQueue类
-class ArrayQueue {
+class CircleQueue {
     private int maxSize;//数组最大容量
     private int front;//队列头
     private int rear;//队列尾部
     private int[] arr;//该数组用来存放队列，模拟队列
 
     //创建队列的构造器
-    public ArrayQueue(int maxSize) {
+    public CircleQueue(int maxSize) {
         this.maxSize = maxSize;
         arr = new int[maxSize];
-        front = -1;//指向队列头部，并不包含，执行队列头的前一个位置
-        rear = -1;//指向队列尾部，执行队列尾的数据，就是队列最后一个数据
+        front = 0;//指向队列中的第一个位置，
+        rear = 0;//指向队列尾部
     }
 
     //判断队列是否满
     public boolean isFull() {
-        return rear == maxSize - 1;
+
+        return (rear+1) % maxSize == front;
     }
 
     //判断队列是否为空
     public boolean isEmpty() {
+
         return rear == front;
     }
 
@@ -91,8 +93,8 @@ class ArrayQueue {
             System.out.println("队列不能加入数据！");
             return;
         } else {
-            rear++;//rear后移
             arr[rear] = n;
+            rear++;
         }
     }
 
@@ -103,8 +105,14 @@ class ArrayQueue {
             //通过抛出异常来处理
             throw new RuntimeException("队列空，不能取数据！");
         }
-        front++;
-        return arr[front];
+        //这里需要分析出front是指向队列的第一个元素
+        //先将front对应的值放在一个临时变量中
+        //front往后移一位
+        //将临时变量返回
+        int data  = arr[front];
+        //后移考虑越界,即front++ > maxSize ,比最大值还大，数组下标越界
+        front = (front + 1) % maxSize;
+        return data;
     }
 
     //显示队列的所以数据
@@ -112,11 +120,15 @@ class ArrayQueue {
         if (isEmpty()) {
             System.out.println("队列是空的，无法遍历");
         } else {
-            for (int i = 0; i < arr.length; i++) {
-                System.out.printf("%d\t", arr[i]);
+            for (int i = front; i < front + valiableSize(); i++) {
+                System.out.printf("%d\t", arr[i % maxSize]);
             }
             System.out.println();
         }
+    }
+
+    public int valiableSize(){
+        return (rear + maxSize - front ) % maxSize;
     }
 
     //显示头数据
@@ -124,6 +136,6 @@ class ArrayQueue {
         if (isEmpty()) {
             throw new RuntimeException("队列为空，不能获取数据！");
         }
-        return arr[front + 1];
+        return arr[front];
     }
 }
