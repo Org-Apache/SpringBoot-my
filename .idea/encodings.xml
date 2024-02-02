@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/LeeCode/src/com/my/Code2023_06_09.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/Thread/src/com/my/Code2023_06_09.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/dataStructure/src/com/dt/str/homework/SparseArrHomwork.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/dataStructure/src/com/dt/str/study/queue/ArrayQueueDemo.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/dataStructure/src/com/dt/str/study/queue/CircleArrayQueueDemo.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/dataStructure/src/com/dt/str/study/sparse/SparseArray.java" charset="GBK" />
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/LeeCode/src/com/my/Code2023_06_09.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Netty-Demo/src/test/java/cn/my/netty/nettyTest1.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/dataStructure/src/com/dt/str/homework/SparseArrHomwork.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dataStructure/src/com/dt/str/study/queue/ArrayQueueDemo.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dataStructure/src/com/dt/str/study/queue/CircleArrayQueueDemo.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lambda/src/com/my/test/Test1.java" charset="GBK" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

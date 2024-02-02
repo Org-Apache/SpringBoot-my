@@ -6,6 +6,8 @@
       <sourceFolder url="file://$MODULE_DIR$/LeeCode/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/dataStructure/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Thread/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lambda/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Netty-Demo/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

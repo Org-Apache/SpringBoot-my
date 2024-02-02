@@ -3,9 +3,9 @@ package com.dt.str.homework;
 import java.io.*;
 
 /*
-* ÔÚÇ°Ãæ¶şÎ¬Êı×éºÍÏ¡ÊèÊı×éÏà»¥×ª»¯µÄ»ù´¡ÉÏ£¬
-* ¢Ù£º½«Ï¡ÊèÊı×é±£³Öµ½´ÅÅÌÉÏ£¬±ÈÈçmap.daa
-* ¢Ú£º»Ö¸´Ô­À´µÄÑù×Ó£¬¶ÁÈ¡map.data½øĞĞ»Ö¸´
+* åœ¨å‰é¢äºŒç»´æ•°ç»„å’Œç¨€ç–æ•°ç»„ç›¸äº’è½¬åŒ–çš„åŸºç¡€ä¸Šï¼Œ
+* â‘ ï¼šå°†ç¨€ç–æ•°ç»„ä¿æŒåˆ°ç£ç›˜ä¸Šï¼Œæ¯”å¦‚map.daa
+* â‘¡ï¼šæ¢å¤åŸæ¥çš„æ ·å­ï¼Œè¯»å–map.dataè¿›è¡Œæ¢å¤
 *
 * */
 public class SparseArrHomwork {
@@ -13,11 +13,11 @@ public class SparseArrHomwork {
     private static final int ARRAY_SIZE =10;
     private static final String FILE_PATH = "F:/IO/map.data";
     public static void main(String[] args){
-        //Ê×ÏÈ´´½¨Ò»¸ö¶şÎ¬Êı×é£¬´óĞ¡ÎªARRAY_SIZE
+        //é¦–å…ˆåˆ›å»ºä¸€ä¸ªäºŒç»´æ•°ç»„ï¼Œå¤§å°ä¸ºARRAY_SIZE
         int[][] originArr = getOriginArr();
-        //½«¶şÎ¬Êı×é×ª»¯ÎªÏ¡ÊèÊı×é
+        //å°†äºŒç»´æ•°ç»„è½¬åŒ–ä¸ºç¨€ç–æ•°ç»„
 
-        //ÏÈ»ñÈ¡ÓĞĞ§Êı×ÖµÄ¸öÊı£¬È·¶¨Ï¡ÊèÊı×éµÄĞĞ
+        //å…ˆè·å–æœ‰æ•ˆæ•°å­—çš„ä¸ªæ•°ï¼Œç¡®å®šç¨€ç–æ•°ç»„çš„è¡Œ
         int sum = 0;
         for(int[] a: originArr){
             for(int data : a){
@@ -32,31 +32,31 @@ public class SparseArrHomwork {
         sparseArray[0][1]=ARRAY_SIZE;
         sparseArray[0][2]=sum;
 
-        //½«¶şÎ¬Êı×é×ª»¯ÎªÏ¡ÊèÊı×é
+        //å°†äºŒç»´æ•°ç»„è½¬åŒ–ä¸ºç¨€ç–æ•°ç»„
         executeSparseArray(sparseArray,originArr);
 
-        //½«Ï¡ÊèÊı×é´æÈë´ÅÅÌ
-        System.out.println("½«Ï¡ÊèÊı×é´æÈë´ÅÅÌ");
+        //å°†ç¨€ç–æ•°ç»„å­˜å…¥ç£ç›˜
+        System.out.println("å°†ç¨€ç–æ•°ç»„å­˜å…¥ç£ç›˜");
         try {
             saveSparseArray(sparseArray);
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        //´Ó´ÅÅÌ¶ÁÈ¡Ï¡ÊèÊı×é
+        //ä»ç£ç›˜è¯»å–ç¨€ç–æ•°ç»„
         int[][] sparseArray2 = new int[0][];
         try {
             sparseArray2 = getSparseArray();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println("´Ó´ÅÅÌ¶ÁÈ¡µ½µÄÏ¡ÊèÊı×éÎª£º");
+        System.out.println("ä»ç£ç›˜è¯»å–åˆ°çš„ç¨€ç–æ•°ç»„ä¸ºï¼š");
 
         printArr(sparseArray2);
 
-        //½«¶ÁÈ¡µ½µÄÏ¡ÊèÊı×é×ª»¯Îª¶şÎ¬Êı×é
+        //å°†è¯»å–åˆ°çš„ç¨€ç–æ•°ç»„è½¬åŒ–ä¸ºäºŒç»´æ•°ç»„
         int[][] cheseArr2 = getAfterArray(sparseArray2);
-        System.out.println("¶ÁÈ¡µ½µÄÏ¡ÊèÊı×é×ª»¯Îª¶şÎ¬Êı×éºó£º");
+        System.out.println("è¯»å–åˆ°çš„ç¨€ç–æ•°ç»„è½¬åŒ–ä¸ºäºŒç»´æ•°ç»„åï¼š");
         printArr(cheseArr2);
     }
 
@@ -117,7 +117,7 @@ public class SparseArrHomwork {
                 }
             }
         }
-        System.out.println("×ª»¯ºóµÄÏ¡ÊèÊı×éÎª£º");
+        System.out.println("è½¬åŒ–åçš„ç¨€ç–æ•°ç»„ä¸ºï¼š");
         printArr(sparseArray);
     }
 
@@ -127,7 +127,7 @@ public class SparseArrHomwork {
         numArr[1][2]=2;
         numArr[1][3]=1;
         numArr[5][6]=2;
-        System.out.println("´´½¨µÄ¶şÎ¬Êı×éÎª£º");
+        System.out.println("åˆ›å»ºçš„äºŒç»´æ•°ç»„ä¸ºï¼š");
         printArr(numArr);
         return numArr;
     }
